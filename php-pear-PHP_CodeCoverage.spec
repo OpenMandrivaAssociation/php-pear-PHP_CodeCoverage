@@ -76,3 +76,17 @@ fi
 %{_datadir}/pear/PHP/*.php
 %{_datadir}/pear/packages/PHP_CodeCoverage.xml
 
+
+
+%changelog
+* Fri Dec 16 2011 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-2mdv2012.0
++ Revision: 742247
+- fix major breakage by careless packager
+
+* Wed Nov 16 2011 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-1
++ Revision: 730873
+- import php-pear-PHP_CodeCoverage
+
+
+* Wed Nov 16 2011 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-1mdv2010.2
+- initial Mandriva package
