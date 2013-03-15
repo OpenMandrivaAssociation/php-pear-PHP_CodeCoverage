@@ -3,7 +3,7 @@
 Summary:	Library that provides collection, processing, and rendering functionality
 Name:		php-pear-%{upstream_name}
 Version:	1.1.1
-Release:	%mkrel 2
+Release:	3
 License:	BSD
 Group:		Development/PHP
 URL:		http://www.phpunit.de/
@@ -22,7 +22,6 @@ Suggests:	php-pear-PHP_TokenStream >= 1.1.0
 Suggests:	php-pear-Text_Template >= 1.1.1
 Suggests:	php-dom
 Suggests:	php-xdebug >= 2.0.5
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 PHPUnit is a regression testing framework used by the developer who implements
@@ -39,7 +38,6 @@ mv package.xml %{upstream_name}-%{version}/%{upstream_name}.xml
 %build
 
 %install
-rm -rf %{buildroot}
 
 cd %{upstream_name}-%{version}
 pear install --nodeps --packagingroot %{buildroot} %{upstream_name}.xml
@@ -52,21 +50,8 @@ install -d %{buildroot}%{_datadir}/pear/packages
 install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 
 %clean
-rm -rf %{buildroot}
 
-%post
-%if %mdkversion < 201000
-pear install --nodeps --soft --force --register-only \
-    %{_datadir}/pear/packages/%{upstream_name}.xml >/dev/null || :
-%endif
 
-%preun
-%if %mdkversion < 201000
-if [ "$1" -eq "0" ]; then
-    pear uninstall --nodeps --ignore-errors --register-only \
-        %{upstream_name} >/dev/null || :
-fi
-%endif
 
 %files
 %defattr(-,root,root)
