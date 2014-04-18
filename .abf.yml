@@ -1,2 +1,4 @@
+removed_sources:
+  PHP_CodeCoverage-1.1.1.tgz: 7ac63e61762d296dadec943fb66613524825a5d3
 sources:
-  "PHP_CodeCoverage-1.1.1.tgz": 7ac63e61762d296dadec943fb66613524825a5d3
+  PHP_CodeCoverage-1.2.13.tgz: 1ad0daf188d096f35e5a0c6ee1d467bd0bf5c7a2

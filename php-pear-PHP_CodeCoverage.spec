@@ -2,8 +2,8 @@
 
 Summary:	Library that provides collection, processing, and rendering functionality
 Name:		php-pear-%{upstream_name}
-Version:	1.1.1
-Release:	3
+Version:	1.2.13
+Release:	1
 License:	BSD
 Group:		Development/PHP
 URL:		http://www.phpunit.de/
@@ -55,23 +55,7 @@ install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 
 %files
 %defattr(-,root,root)
-%doc %{upstream_name}-%{version}/ChangeLog.markdown
 %doc %{upstream_name}-%{version}/LICENSE
 %{_datadir}/pear/PHP/CodeCoverage
 %{_datadir}/pear/PHP/*.php
 %{_datadir}/pear/packages/PHP_CodeCoverage.xml
-
-
-
-%changelog
-* Fri Dec 16 2011 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-2mdv2012.0
-+ Revision: 742247
-- fix major breakage by careless packager
-
-* Wed Nov 16 2011 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-1
-+ Revision: 730873
-- import php-pear-PHP_CodeCoverage
-
-
-* Wed Nov 16 2011 Oden Eriksson <oeriksson@mandriva.com> 1.1.1-1mdv2010.2
-- initial Mandriva package
