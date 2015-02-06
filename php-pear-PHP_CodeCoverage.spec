@@ -3,7 +3,7 @@
 Summary:	Library that provides collection, processing, and rendering functionality
 Name:		php-pear-%{upstream_name}
 Version:	1.2.13
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/PHP
 URL:		http://www.phpunit.de/
