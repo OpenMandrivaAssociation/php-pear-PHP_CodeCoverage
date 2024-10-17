@@ -6,7 +6,7 @@ Version:	1.2.13
 Release:	2
 License:	BSD
 Group:		Development/PHP
-URL:		http://www.phpunit.de/
+URL:		https://www.phpunit.de/
 Source0:	http://pear.phpunit.de/get/PHP_CodeCoverage-%{version}.tgz
 Requires(post): php-pear
 Requires(preun): php-pear
